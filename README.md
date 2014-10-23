@@ -11,13 +11,14 @@ It's easy! Start by instantiating the builder:
 ReflectionClassDefinitionBuilder builder = new ReflectionClassDefinitionBuilder();
 ```
 
-Then pass in the class you want to create a definition for:
+Then pass in a Portable class and back comes a matching class definition:
 ```
 ClassDefinition classDefinition = builder.build(PortableClass.class);
 ```
 
-Finally, add the definition to the serialization config
+Finally, you typically add the definition to the serialization config:
 ```
 Config config = new Config();
 config.getSerializationConfig().addClassDefinition(classDefinition);
 ```
+*Limitations:* The builder has a few limitations when it comes to nested objects. It only handles nested Portable properties. We will provide an extension mechanism in the near future perhaps.
