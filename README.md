@@ -8,7 +8,7 @@ This is a reflection based class definition builder which saves you from a lot o
 ######Getting Started
 It's easy! Start by instantiating the builder:
 ```
-  ReflectionClassDefinitionBuilder builder = new ReflectionClassDefinitionBuilder();
+ReflectionClassDefinitionBuilder builder = new ReflectionClassDefinitionBuilder();
 ```
 
 Then pass in the class you want to create a definition for:
@@ -16,7 +16,7 @@ Then pass in the class you want to create a definition for:
 ClassDefinition classDefinition = builder.build(PortableClass.class);
 ```
 
-Finally, add it to the serialization config
+Finally, add the definition to the serialization config
 ```
 Config config = new Config();
 config.getSerializationConfig().addClassDefinition(classDefinition);
